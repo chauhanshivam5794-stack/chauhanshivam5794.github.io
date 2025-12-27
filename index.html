@@ -4,146 +4,126 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>100xGrowth | Business Growth Consultant</title>
+
+<title>100XGrowth | Business Growth Consultant</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#0b1020;color:#fff}
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0b1020;
+  color:#ffffff;
+}
 
 /* ===== SLIDER ===== */
 .slider{
-  width:95%;
-  max-width:1100px;
-  margin:30px auto;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 20px 40px rgba(0,0,0,.5)
-}
-.slide{display:none;position:relative}
-.slide img{width:100%;height:280px;object-fit:cover}
-.slide-text{
-  position:absolute;
-  bottom:0;
   width:100%;
-  padding:18px;
-  background:linear-gradient(to top,rgba(0,0,0,.85),transparent);
-  font-size:18px;
-  text-align:center
+  height:260px;
+  overflow:hidden;
+  position:relative;
 }
-.active{display:block}
+
+.slides{
+  display:flex;
+  width:300%;
+  animation: slide 12s infinite;
+}
+
+.slide{
+  width:100%;
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  font-size:18px;
+  padding:20px;
+  text-align:center;
+}
+
+@keyframes slide{
+  0%{transform:translateX(0)}
+  33%{transform:translateX(-100%)}
+  66%{transform:translateX(-200%)}
+  100%{transform:translateX(0)}
+}
 
 /* ===== HERO ===== */
 .hero{
+  padding:60px 20px;
   text-align:center;
-  padding:70px 20px;
-  background:linear-gradient(135deg,#0f172a,#1e293b)
 }
+
 .brand{
-  letter-spacing:4px;
   color:#38bdf8;
-  margin-bottom:15px
+  letter-spacing:6px;
+  font-size:14px;
+  margin-bottom:10px;
 }
-.hero h2{
-  font-size:34px;
+
+.hero h1{
+  font-size:32px;
   line-height:1.3;
-  margin-bottom:20px
+  margin-bottom:15px;
 }
-#changing-text{
-  font-size:18px;
-  color:#c7d2fe;
+
+.hero p{
+  color:#cbd5f5;
+  font-size:16px;
   margin-bottom:30px;
-  transition:opacity .5s
 }
-.cta-btn{
-  padding:15px 32px;
+
+.cta{
+  display:inline-block;
+  padding:14px 28px;
   background:linear-gradient(90deg,#22c55e,#16a34a);
-  color:#fff;
+  color:#ffffff;
   text-decoration:none;
   border-radius:30px;
   font-weight:bold;
-  box-shadow:0 10px 25px rgba(34,197,94,.4)
-}
-.cta-btn:hover{transform:scale(1.05)}
-
-@media(max-width:600px){
-  .hero h2{font-size:26px}
-  .slide img{height:230px}
+  box-shadow:0 10px 25px rgba(34,197,94,0.4);
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===== SERVICE SLIDER (FLIPKART STYLE) ===== -->
+<!-- ===== SLIDER ===== -->
 <div class="slider">
+  <div class="slides">
 
-  <div class="slide active">
-    <img src="images/web-dev.jpg">
-    <div class="slide-text">
-      Website Development • Landing Pages • Conversion Focused Design
-    </div>
-  </div>
-
-  <div class="slide">
-    <img src="images/instagram.jpg">
-    <div class="slide-text">
-      Brand Promotion with 170K+ Instagram Reach • Shopify & New Brands
-    </div>
-  </div>
-
-  <div class="slide">
-    <img src="images/ads-growth.jpg">
-    <div class="slide-text">
+    <div class="slide">
       Smart Paid Ads • More Calls • Real Customers • No Money Waste
     </div>
-  </div>
 
+    <div class="slide">
+      Website Development • Landing Pages • Conversion Focused Design
+    </div>
+
+    <div class="slide">
+      Instagram Growth • Brand Promotion • Business Scaling Strategy
+    </div>
+
+  </div>
 </div>
 
-<!-- ===== HERO CONTENT ===== -->
+<!-- ===== HERO SECTION ===== -->
 <section class="hero">
-  <h1 class="brand">100XGROWTH</h1>
+  <div class="brand">100XGROWTH</div>
 
-  <h2>
+  <h1>
     Helping Businesses Grow<br>
     Using Smart Online Strategies
-  </h2>
+  </h1>
 
-  <p id="changing-text">Get more calls without wasting ad money</p>
+  <p>
+    Turn visitors into real customers without wasting ad money
+  </p>
 
-  <a class="cta-btn" href="https://wa.me/918858166635">
+  <a class="cta" href="https://wa.me/918858166635" target="_blank">
     Free Business Discussion on WhatsApp
   </a>
 </section>
-
-<script>
-/* TEXT ROTATION */
-const texts=[
- "Get more calls without wasting ad money",
- "Build trust before customers contact you",
- "Turn visitors into real customers",
- "Growth strategy that actually works"
-];
-let ti=0;
-const tEl=document.getElementById("changing-text");
-setInterval(()=>{
- tEl.style.opacity=0;
- setTimeout(()=>{
-  ti=(ti+1)%texts.length;
-  tEl.textContent=texts[ti];
-  tEl.style.opacity=1;
- },500);
-},3000);
-
-/* IMAGE SLIDER */
-let si=0;
-const slides=document.querySelectorAll(".slide");
-setInterval(()=>{
- slides[si].classList.remove("active");
- si=(si+1)%slides.length;
- slides[si].classList.add("active");
-},3500);
-</script>
 
 </body>
 </html>
