@@ -3,156 +3,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>100XGrowth | Business Growth Consultant</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100xGrowth | Business Growth Consultant</title>
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, sans-serif;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #ffffff;
+    }
 
-body{
-  background:#0b1020;
-  color:#fff;
-}
+    /* ===== INSIGHTS SLIDER (TOP) ===== */
+    .insights {
+      padding: 80px 20px;
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+    }
 
-/* ===== SLIDER ===== */
-.slider{
-  position:relative;
-  width:100%;
-  height:260px;
-  overflow:hidden;
-}
+    .insight-card {
+      display: none;
+      max-width: 900px;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      border-radius: 22px;
+      padding: 30px;
+      align-items: center;
+      gap: 25px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
 
-.slide{
-  position:absolute;
-  width:100%;
-  height:100%;
-  opacity:0;
-  transition:opacity 1s ease;
-}
+    .insight-card.active {
+      display: flex;
+    }
 
-.slide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+    .insight-card img {
+      width: 45%;
+      border-radius: 16px;
+    }
 
-.slide::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
-}
+    .insight-card p {
+      width: 55%;
+      font-size: 20px;
+      color: #e5e7eb;
+      line-height: 1.5;
+    }
 
-.slide-text{
-  position:absolute;
-  bottom:25px;
-  left:20px;
-  right:20px;
-  z-index:2;
-  font-size:18px;
-  line-height:1.4;
-}
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
+    }
 
-.active{
-  opacity:1;
-}
+    .brand {
+      font-size: 22px;
+      letter-spacing: 3px;
+      color: #38bdf8;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
 
-/* ===== HERO ===== */
-.hero{
-  min-height:calc(100vh - 260px);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:40px 20px;
-  background:linear-gradient(135deg,#0f172a,#1e293b,#312e81);
-}
+    .main-heading {
+      font-size: 38px;
+      font-weight: bold;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
 
-.brand{
-  letter-spacing:4px;
-  color:#38bdf8;
-  font-size:14px;
-  margin-bottom:10px;
-}
+    .changing-text {
+      font-size: 18px;
+      color: #c7d2fe;
+      margin-bottom: 35px;
+      transition: opacity 0.5s ease;
+    }
 
-.hero h1{
-  font-size:32px;
-  margin-bottom:15px;
-}
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 30px;
+      background: linear-gradient(90deg, #22c55e, #16a34a);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(34,197,94,0.4);
+    }
 
-.hero p{
-  font-size:16px;
-  opacity:0.9;
-  margin-bottom:25px;
-}
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .main-heading { font-size: 30px; }
 
-.cta{
-  display:inline-block;
-  padding:14px 28px;
-  background:linear-gradient(90deg,#22c55e,#16a34a);
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:30px;
-  box-shadow:0 10px 30px rgba(34,197,94,0.4);
-}
-</style>
+      .insight-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .insight-card img,
+      .insight-card p {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- ===== SLIDER SECTION ===== -->
-<div class="slider">
-  <div class="slide active">
-    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-    <div class="slide-text">
-      Visibility brings traffic, strategy turns it into real customers
-    </div>
+<!-- 🔥 IMAGE SLIDER FIRST -->
+<section class="insights">
+  <div class="insight-card active">
+    <img src="https://images.unsplash.com/photo-1556761175-129418cb2dfe">
+    <p>Most businesses lose customers because they don’t build trust online</p>
   </div>
 
-  <div class="slide">
-    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
-    <div class="slide-text">
-      Website + Landing Pages that convert visitors into leads
-    </div>
+  <div class="insight-card">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+    <p>A good website is not about design, it’s about strategy</p>
   </div>
 
-  <div class="slide">
-    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-    <div class="slide-text">
-      Instagram Growth • Ads • Brand Promotion (170K+ Reach)
-    </div>
+  <div class="insight-card">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+    <p>Visibility brings traffic, strategy turns it into real customers</p>
   </div>
-</div>
+</section>
 
-<!-- ===== HERO SECTION ===== -->
+<!-- 🔥 HERO BELOW -->
 <section class="hero">
   <div>
-    <div class="brand">100XGROWTH</div>
-    <h1>Helping Businesses Grow<br>Using Smart Online Strategies</h1>
-    <p>Get more calls without wasting ad money</p>
+    <div class="brand">100xGrowth</div>
 
-    <a class="cta" href="https://wa.me/918858166635">
+    <div class="main-heading">
+      Helping Businesses Grow<br>
+      Using Smart Online Strategies
+    </div>
+
+    <div id="changing-text" class="changing-text">
+      Get more calls without wasting ad money
+    </div>
+
+    <a href="https://wa.me/918858166635" class="cta-btn">
       Free Business Discussion on WhatsApp
     </a>
   </div>
 </section>
 
 <script>
-let slides=document.querySelectorAll(".slide");
-let index=0;
+  const texts = [
+    "Get more calls without wasting ad money",
+    "Build trust before customers contact you",
+    "Turn visitors into real customers"
+  ];
 
-setInterval(()=>{
-  slides[index].classList.remove("active");
-  index=(index+1)%slides.length;
-  slides[index].classList.add("active");
-},3500);
+  let textIndex = 0;
+  const textElement = document.getElementById("changing-text");
+
+  setInterval(() => {
+    textElement.style.opacity = 0;
+    setTimeout(() => {
+      textIndex = (textIndex + 1) % texts.length;
+      textElement.textContent = texts[textIndex];
+      textElement.style.opacity = 1;
+    }, 500);
+  }, 3000);
+
+  const cards = document.querySelectorAll(".insight-card");
+  let current = 0;
+
+  setInterval(() => {
+    cards[current].classList.remove("active");
+    current = (current + 1) % cards.length;
+    cards[current].classList.add("active");
+  }, 4000);
 </script>
 
 </body>
