@@ -1,129 +1,159 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>100XGrowth | Business Growth Consultant</title>
 
 <style>
-body{
+*{
   margin:0;
-  font-family:Arial, sans-serif;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
   background:#0b1020;
-  color:#ffffff;
+  color:#fff;
 }
 
 /* ===== SLIDER ===== */
 .slider{
+  position:relative;
   width:100%;
   height:260px;
   overflow:hidden;
-  position:relative;
-}
-
-.slides{
-  display:flex;
-  width:300%;
-  animation: slide 12s infinite;
 }
 
 .slide{
+  position:absolute;
   width:100%;
-  flex-shrink:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(135deg,#0f172a,#1e293b);
-  font-size:18px;
-  padding:20px;
-  text-align:center;
+  height:100%;
+  opacity:0;
+  transition:opacity 1s ease;
 }
 
-@keyframes slide{
-  0%{transform:translateX(0)}
-  33%{transform:translateX(-100%)}
-  66%{transform:translateX(-200%)}
-  100%{transform:translateX(0)}
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.slide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+}
+
+.slide-text{
+  position:absolute;
+  bottom:25px;
+  left:20px;
+  right:20px;
+  z-index:2;
+  font-size:18px;
+  line-height:1.4;
+}
+
+.active{
+  opacity:1;
 }
 
 /* ===== HERO ===== */
 .hero{
-  padding:60px 20px;
+  min-height:calc(100vh - 260px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
+  padding:40px 20px;
+  background:linear-gradient(135deg,#0f172a,#1e293b,#312e81);
 }
 
 .brand{
+  letter-spacing:4px;
   color:#38bdf8;
-  letter-spacing:6px;
   font-size:14px;
   margin-bottom:10px;
 }
 
 .hero h1{
   font-size:32px;
-  line-height:1.3;
   margin-bottom:15px;
 }
 
 .hero p{
-  color:#cbd5f5;
   font-size:16px;
-  margin-bottom:30px;
+  opacity:0.9;
+  margin-bottom:25px;
 }
 
 .cta{
   display:inline-block;
   padding:14px 28px;
   background:linear-gradient(90deg,#22c55e,#16a34a);
-  color:#ffffff;
+  color:#fff;
   text-decoration:none;
-  border-radius:30px;
   font-weight:bold;
-  box-shadow:0 10px 25px rgba(34,197,94,0.4);
+  border-radius:30px;
+  box-shadow:0 10px 30px rgba(34,197,94,0.4);
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===== SLIDER ===== -->
+<!-- ===== SLIDER SECTION ===== -->
 <div class="slider">
-  <div class="slides">
-
-    <div class="slide">
-      Smart Paid Ads • More Calls • Real Customers • No Money Waste
+  <div class="slide active">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+    <div class="slide-text">
+      Visibility brings traffic, strategy turns it into real customers
     </div>
+  </div>
 
-    <div class="slide">
-      Website Development • Landing Pages • Conversion Focused Design
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
+    <div class="slide-text">
+      Website + Landing Pages that convert visitors into leads
     </div>
+  </div>
 
-    <div class="slide">
-      Instagram Growth • Brand Promotion • Business Scaling Strategy
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+    <div class="slide-text">
+      Instagram Growth • Ads • Brand Promotion (170K+ Reach)
     </div>
-
   </div>
 </div>
 
 <!-- ===== HERO SECTION ===== -->
 <section class="hero">
-  <div class="brand">100XGROWTH</div>
+  <div>
+    <div class="brand">100XGROWTH</div>
+    <h1>Helping Businesses Grow<br>Using Smart Online Strategies</h1>
+    <p>Get more calls without wasting ad money</p>
 
-  <h1>
-    Helping Businesses Grow<br>
-    Using Smart Online Strategies
-  </h1>
-
-  <p>
-    Turn visitors into real customers without wasting ad money
-  </p>
-
-  <a class="cta" href="https://wa.me/918858166635" target="_blank">
-    Free Business Discussion on WhatsApp
-  </a>
+    <a class="cta" href="https://wa.me/918858166635">
+      Free Business Discussion on WhatsApp
+    </a>
+  </div>
 </section>
+
+<script>
+let slides=document.querySelectorAll(".slide");
+let index=0;
+
+setInterval(()=>{
+  slides[index].classList.remove("active");
+  index=(index+1)%slides.length;
+  slides[index].classList.add("active");
+},3500);
+</script>
 
 </body>
 </html>
