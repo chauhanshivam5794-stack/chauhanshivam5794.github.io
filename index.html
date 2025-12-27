@@ -259,6 +259,61 @@
   margin-bottom: 22px;
     }
   </style>
+  /* ===== MY APPROACH ===== */
+.approach {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #020617, #0b1228);
+  text-align: center;
+}
+
+.approach-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.approach h2 {
+  font-size: 34px;
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+
+.approach-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.step {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 30px;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-6px);
+}
+
+.step span {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
+
+.step h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.step p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
 </head>
 
 <body>
@@ -324,6 +379,46 @@
       Growth works best when the strategy fits the business — not the trend.
     </p>
   </div>
+  <!-- ===== MY APPROACH SECTION ===== -->
+<section class="approach">
+  <div class="approach-container">
+    <h2>My Approach</h2>
+
+    <div class="approach-steps">
+      <div class="step">
+        <span>01</span>
+        <h3>Business Understanding</h3>
+        <p>
+          I take time to understand your business model, audience, and long-term goals.
+        </p>
+      </div>
+
+      <div class="step">
+        <span>02</span>
+        <h3>Growth Analysis</h3>
+        <p>
+          I identify gaps in visibility, trust, customer journey, and conversions.
+        </p>
+      </div>
+
+      <div class="step">
+        <span>03</span>
+        <h3>Strategy Creation</h3>
+        <p>
+          I suggest only what is necessary — no extra tools, no unnecessary services.
+        </p>
+      </div>
+
+      <div class="step">
+        <span>04</span>
+        <h3>Execution & Improvement</h3>
+        <p>
+          I help implement the strategy and refine it continuously for better results.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 </section>
 <script>
   const texts = [
