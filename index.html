@@ -6,7 +6,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>100xGrowth | Business Growth Consultant</title>
+/* ===== WEB DEVELOPMENT SERVICE ===== */
 
+.webdev {
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #020617, #0b1228, #1e1b4b);
+  color: #fff;
+}
+
+.webdev-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Slider */
+.webdev-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  margin-bottom: 60px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+
+.webdev-slide {
+  display: none;
+}
+
+.webdev-slide.active {
+  display: block;
+}
+
+.webdev-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+}
+
+/* Headings */
+.webdev h2 {
+  font-size: 36px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.webdev-subtitle {
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #7dd3fc;
+  margin-bottom: 50px;
+}
+
+/* Cards */
+.webdev-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 26px;
+}
+
+.webdev-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 28px;
+  transition: all 0.4s ease;
+}
+
+.webdev-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(56,189,248,0.25);
+}
+
+.webdev-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.webdev-card p {
+  font-size: 14px;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+/* CTA */
+.webdev-cta {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.webdev-cta a {
+  display: inline-block;
+  margin: 10px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.whatsapp-btn {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  color: #fff;
+}
+
+.email-btn {
+  background: linear-gradient(90deg, #6366f1, #9333ea);
+  color: #fff;
+}
   <style>
     /* ===== MY APPROACH (PROFESSIONAL) ===== */
 .approach {
@@ -443,6 +550,80 @@
     </div>
   </div>
 </section>
+  <section class="webdev">
+  <div class="webdev-container">
+
+    <!-- SLIDER -->
+    <div class="webdev-slider">
+      <!-- Slide 1 (Your Image) -->
+      <div class="webdev-slide active">
+        <img src="YOUR_IMAGE_HERE.jpg" alt="Web Development">
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="webdev-slide">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="">
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="webdev-slide">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="">
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="webdev-slide">
+        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7" alt="">
+      </div>
+    </div>
+
+    <h2>Website Development</h2>
+    <div class="webdev-subtitle">
+      Strategy-Driven Websites That Turn Visitors Into Customers
+    </div>
+
+    <div class="webdev-grid">
+      <div class="webdev-card">
+        <h3>Business Websites</h3>
+        <p>Professional websites designed to build trust and generate inquiries.</p>
+      </div>
+
+      <div class="webdev-card">
+        <h3>E-Learning Platforms</h3>
+        <p>Course portals with videos, dashboards, and secure access.</p>
+      </div>
+
+      <div class="webdev-card">
+        <h3>Shopify / Ecommerce</h3>
+        <p>Online stores built for conversions and smooth checkout.</p>
+      </div>
+
+      <div class="webdev-card">
+        <h3>Landing Pages</h3>
+        <p>High-converting pages focused on leads and sales.</p>
+      </div>
+
+      <div class="webdev-card">
+        <h3>Booking Systems</h3>
+        <p>Appointment & booking websites with automation.</p>
+      </div>
+
+      <div class="webdev-card">
+        <h3>Custom Web Apps</h3>
+        <p>Tailor-made systems built for business workflows.</p>
+      </div>
+    </div>
+
+    <div class="webdev-cta">
+      <a href="https://wa.me/918858166635" class="whatsapp-btn">
+        WhatsApp Discussion
+      </a>
+      <a href="mailto:chauhanshivam5794@gmail.com" class="email-btn">
+        Email Me
+      </a>
+    </div>
+
+  </div>
+  </section>
 <script>
   const texts = [
     "Get more calls without wasting ad money",
