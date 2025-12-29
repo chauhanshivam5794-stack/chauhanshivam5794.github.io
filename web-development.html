@@ -6,6 +6,61 @@
 <title>Website Development | Shivam Chauhan</title>
 
 <style>
+  .cta a:hover{
+  box-shadow: 0 0 25px rgba(34,197,94,0.5);
+  }
+  
+  .slider img{
+  max-height: 420px;
+  object-fit: cover;
+  }
+  .slider {
+  overflow: hidden;
+}
+
+.slide {
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+  .slide img {
+  transition: transform 6s ease;
+}
+
+.slide.active img {
+  transform: scale(1.05);
+}
+  .webdev-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.02)
+  );
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  font-size: 17px;
+  }
+  .whatsapp, .email {
+  transition: all 0.3s ease;
+}
+
+.whatsapp:hover, .email:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+  @media (max-width: 768px) {
+  .webdev-hero h1 {
+    font-size: 28px;
+  }
+  .slider {
+    margin: 30px auto;
+  }
+  }
 body{
   margin:0;
   font-family:Arial, sans-serif;
@@ -102,7 +157,7 @@ body{
 
 <div class="slider">
   <div class="slide active">
-    <img src="images/Picsart_25-12-29_07-09-10-231.png" alt="Shivam Chauhan">
+   <img src="images/shivam.png" alt="Shivam Chauhan"> 
   </div>
   <div class="slide">
     <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
@@ -131,13 +186,16 @@ body{
 </div>
 
 <script>
-let i=0;
-setInterval(()=>{
-  const slides=document.querySelectorAll(".slide");
-  slides.forEach(s=>s.classList.remove("active"));
-  i=(i+1)%slides.length;
-  slides[i].classList.add("active");
-},3000);
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  }, 3000);
+});
 </script>
 
 </body>
