@@ -273,94 +273,15 @@
   color: #7dd3fc;
   margin-bottom: 22px;
     }
-  .hidden { 
-  display: none; 
-}
+  
 
-.slide { 
-  display: none; 
-  width: 100%; 
-  border-radius: 20px; 
-}
-
-.slide.active { 
-  display: block; 
-}
-
-.service-card { 
-  cursor: pointer; 
-}
-
-.back-btn { 
-  margin-bottom: 20px; 
-}
   </style>
   
 
 </head>
 
 <body>
-  <section class="services">
-  <h2>How I Help Businesses Grow</h2>
 
-  <div class="service-list">
-
-    <div class="service-card" onclick="openService('webdev')">
-      <h3>Website Development</h3>
-      <p>High-performance websites that convert visitors into customers</p>
-    </div>
-
-    <div class="service-card" onclick="openService('insta')">
-      <h3>Instagram Promotion (170K Network)</h3>
-      <p>Organic + viral reach for real leads</p>
-    </div>
-
-    <div class="service-card" onclick="openService('ads')">
-      <h3>Google Ads Management</h3>
-      <p>ROI-focused paid advertising</p>
-    </div>
-
-    <div class="service-card" onclick="openService('research')">
-      <h3>Market & Business Research</h3>
-      <p>Smart strategies before spending money</p>
-    </div>
-
-  </div>
-  </section>
-  <section id="webdev" class="service-detail hidden">
-
-  <button class="back-btn" onclick="closeService()">← Back</button>
-
-  <!-- SLIDER -->
-  <div class="webdev-slider">
-    <img class="slide active"
-      src="https://drive.google.com/uc?export=view&id=1Bz9ZRO_CxlkuApJ9Tg74WmBbp8ZN5E3b">
-    <img class="slide"
-      src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-    <img class="slide"
-      src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-    <img class="slide"
-      src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7">
-  </div>
-
-  <h2>Website Development</h2>
-  <p class="subtitle">Strategy-Driven Websites That Turn Visitors Into Customers</p>
-
-  <div class="webdev-grid">
-    <div class="webdev-card">Business Websites</div>
-    <div class="webdev-card">E-Learning Platforms</div>
-    <div class="webdev-card">Shopify / Ecommerce</div>
-    <div class="webdev-card">Landing Pages</div>
-    <div class="webdev-card">Booking Systems</div>
-    <div class="webdev-card">Custom Web Apps</div>
-  </div>
-
-  <div class="cta">
-    <a href="https://wa.me/918858166635">WhatsApp</a>
-    <a href="mailto:chauhanshivam5794@gmail.com">Email</a>
-  </div>
-
-  </section>
 
 <!-- 🔥 IMAGE SLIDER FIRST -->
 <section class="insights">
@@ -502,26 +423,6 @@
     cards[current].classList.add("active");
   }, 4000);
 </script>
-<script>
-function openService(id) {
-  document.querySelector('.services').style.display = 'none';
-  document.getElementById(id).classList.remove('hidden');
-}
 
-function closeService() {
-  document.querySelector('.services').style.display = 'block';
-  document.querySelectorAll('.service-detail')
-    .forEach(s => s.classList.add('hidden'));
-}
-
-/* IMAGE SLIDER */
-let index = 0;
-setInterval(() => {
-  const slides = document.querySelectorAll('#webdev .slide');
-  slides.forEach(s => s.classList.remove('active'));
-  index = (index + 1) % slides.length;
-  slides[index].classList.add('active');
-}, 3000);
-</script>  
 </body>
 </html>
