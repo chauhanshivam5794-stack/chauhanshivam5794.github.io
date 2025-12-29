@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Development | Shivam Chauhan</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#020617;
+  color:#fff;
+}
+
+/* HERO */
+.webdev-hero{
+  padding:80px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#020617,#1e1b4b);
+}
+
+.webdev-hero h1{
+  font-size:38px;
+}
+
+.webdev-hero p{
+  color:#7dd3fc;
+  font-size:18px;
+}
+
+/* SLIDER */
+.slider{
+  max-width:900px;
+  margin:50px auto;
+  position:relative;
+}
+
+.slide{
+  display:none;
+}
+
+.slide.active{
+  display:block;
+}
+
+.slide img{
+  width:100%;
+  border-radius:22px;
+}
+
+/* GRID */
+.webdev-grid{
+  max-width:1100px;
+  margin:80px auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  padding:0 20px;
+}
+
+.webdev-card{
+  background:rgba(255,255,255,0.06);
+  padding:30px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:.4s;
+}
+
+.webdev-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 40px rgba(168,85,247,0.35);
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.cta a{
+  display:inline-block;
+  margin:10px;
+  padding:14px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:bold;
+}
+
+.whatsapp{background:#22c55e;}
+.email{background:#6366f1;}
+</style>
+</head>
+
+<body>
+
+<section class="webdev-hero">
+  <h1>Website Development</h1>
+  <p>Strategy-Driven Websites That Turn Visitors Into Customers</p>
+</section>
+
+<div class="slider">
+  <div class="slide active">
+    <img src="https://drive.google.com/uc?export=view&id=1Bz9ZRO_CxlkuApJ9Tg74WmBbp8ZN5E3b">
+  </div>
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+  </div>
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+  </div>
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7">
+  </div>
+</div>
+
+<section class="webdev-grid">
+  <div class="webdev-card">Business Websites</div>
+  <div class="webdev-card">E-Learning Platforms</div>
+  <div class="webdev-card">Shopify / Ecommerce</div>
+  <div class="webdev-card">Landing Pages</div>
+  <div class="webdev-card">Booking Systems</div>
+  <div class="webdev-card">Automation Systems</div>
+  <div class="webdev-card">Custom Web Apps</div>
+</section>
+
+<div class="cta">
+  <a href="https://wa.me/918858166635" class="whatsapp">WhatsApp</a>
+  <a href="mailto:chauhanshivam5794@gmail.com" class="email">Email</a>
+</div>
+
+<script>
+let i=0;
+setInterval(()=>{
+  const slides=document.querySelectorAll(".slide");
+  slides.forEach(s=>s.classList.remove("active"));
+  i=(i+1)%slides.length;
+  slides[i].classList.add("active");
+},3000);
+</script>
+
+</body>
+</html>
