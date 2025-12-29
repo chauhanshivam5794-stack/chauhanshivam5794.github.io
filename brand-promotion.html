@@ -6,6 +6,8 @@
 <title>Brand Promotion</title>
 
 <style>
+  background:linear-gradient(90deg,var(--blue),var(--purple),var(--pink));
+  background:linear-gradient(90deg,var(--blue),var(--purple));
 :root{
   --bg:#020617;
   --card:#0f172a;
@@ -26,9 +28,16 @@ body{
 .hero{
   padding:110px 20px;
   text-align:center;
+
   background:
-    radial-gradient(circle at top,#1e293b,#020617 70%);
+    radial-gradient(
+      circle at top,
+      rgba(236,72,153,0.18),   /* pink glow */
+      rgba(56,189,248,0.18),   /* blue glow */
+      #020617 70%
+    );
 }
+
 
 .hero h1{
   font-size:42px;
