@@ -82,6 +82,68 @@
       background: #0b1020;
       color: #ffffff;
     }
+    
+    <section class="services">
+  <h2>How I Help Businesses Grow</h2>
+
+  <div class="service-list">
+
+    <div class="service-card" onclick="openService('webdev')">
+      <h3>Website Development</h3>
+      <p>High-performance websites that convert visitors into customers</p>
+    </div>
+
+    <div class="service-card" onclick="openService('insta')">
+      <h3>Instagram Promotion (170K Network)</h3>
+      <p>Organic + viral reach for real leads</p>
+    </div>
+
+    <div class="service-card" onclick="openService('ads')">
+      <h3>Google Ads Management</h3>
+      <p>ROI-focused paid advertising</p>
+    </div>
+
+    <div class="service-card" onclick="openService('research')">
+      <h3>Market & Business Research</h3>
+      <p>Smart strategies before spending money</p>
+    </div>
+
+  </div>
+</section>
+    <section id="webdev" class="service-detail hidden">
+
+  <button class="back-btn" onclick="closeService()">← Back</button>
+
+  <!-- SLIDER -->
+  <div class="webdev-slider">
+    <img class="slide active"
+      src="https://drive.google.com/uc?export=view&id=1Bz9ZRO_CxlkuApJ9Tg74WmBbp8ZN5E3b">
+    <img class="slide"
+      src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+    <img class="slide"
+      src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+    <img class="slide"
+      src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7">
+  </div>
+
+  <h2>Website Development</h2>
+  <p class="subtitle">Strategy-Driven Websites That Turn Visitors Into Customers</p>
+
+  <div class="webdev-grid">
+    <div class="webdev-card">Business Websites</div>
+    <div class="webdev-card">E-Learning Platforms</div>
+    <div class="webdev-card">Shopify / Ecommerce</div>
+    <div class="webdev-card">Landing Pages</div>
+    <div class="webdev-card">Booking Systems</div>
+    <div class="webdev-card">Custom Web Apps</div>
+  </div>
+
+  <div class="cta">
+    <a href="https://wa.me/918858166635">WhatsApp</a>
+    <a href="mailto:chauhanshivam5794@gmail.com">Email</a>
+  </div>
+
+</section>
 
     /* ===== INSIGHTS SLIDER (TOP) ===== */
     .insights {
@@ -271,114 +333,27 @@
   color: #7dd3fc;
   margin-bottom: 22px;
     }
-  /* ===== WEB DEVELOPMENT SERVICE ===== */
-
-.webdev {
-  padding: 90px 20px;
-  background: linear-gradient(135deg, #020617, #0b1228, #1e1b4b);
-  color: #fff;
+  .hidden { 
+  display: none; 
 }
 
-.webdev-container {
-  max-width: 1100px;
-  margin: auto;
+.slide { 
+  display: none; 
+  width: 100%; 
+  border-radius: 20px; 
 }
 
-/* Slider */
-.webdev-slider {
-  position: relative;
-  overflow: hidden;
-  border-radius: 22px;
-  margin-bottom: 60px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+.slide.active { 
+  display: block; 
 }
 
-.webdev-slide {
-  display: none;
+.service-card { 
+  cursor: pointer; 
 }
 
-.webdev-slide.active {
-  display: block;
+.back-btn { 
+  margin-bottom: 20px; 
 }
-
-.webdev-slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 22px;
-}
-
-/* Headings */
-.webdev h2 {
-  font-size: 36px;
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.webdev-subtitle {
-  text-align: center;
-  font-size: 16px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #7dd3fc;
-  margin-bottom: 50px;
-}
-
-/* Cards */
-.webdev-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 26px;
-}
-
-.webdev-card {
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(10px);
-  border-radius: 18px;
-  padding: 28px;
-  transition: all 0.4s ease;
-}
-
-.webdev-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(56,189,248,0.25);
-}
-
-.webdev-card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.webdev-card p {
-  font-size: 14px;
-  color: #cbd5f5;
-  line-height: 1.6;
-}
-
-/* CTA */
-.webdev-cta {
-  margin-top: 60px;
-  text-align: center;
-}
-
-.webdev-cta a {
-  display: inline-block;
-  margin: 10px;
-  padding: 14px 30px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.whatsapp-btn {
-  background: linear-gradient(90deg, #22c55e, #16a34a);
-  color: #fff;
-}
-
-.email-btn {
-  background: linear-gradient(90deg, #6366f1, #9333ea);
-  color: #fff;
-}  
   </style>
   
 
@@ -526,6 +501,26 @@
     cards[current].classList.add("active");
   }, 4000);
 </script>
-  
+<script>
+function openService(id) {
+  document.querySelector('.services').style.display = 'none';
+  document.getElementById(id).classList.remove('hidden');
+}
+
+function closeService() {
+  document.querySelector('.services').style.display = 'block';
+  document.querySelectorAll('.service-detail')
+    .forEach(s => s.classList.add('hidden'));
+}
+
+/* IMAGE SLIDER */
+let index = 0;
+setInterval(() => {
+  const slides = document.querySelectorAll('#webdev .slide');
+  slides.forEach(s => s.classList.remove('active'));
+  index = (index + 1) % slides.length;
+  slides[index].classList.add('active');
+}, 3000);
+</script>  
 </body>
 </html>
