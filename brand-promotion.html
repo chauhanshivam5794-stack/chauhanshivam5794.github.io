@@ -26,17 +26,23 @@ body{
 
 /* ===== HERO ===== */
 .hero{
-  padding:110px 20px;
+  min-height:100vh;   /* 🔥 ye main fix hai */
+  padding:120px 20px;
   text-align:center;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
   background:
     radial-gradient(
-      circle at top,
-      rgba(236,72,153,0.18),   /* pink glow */
-      rgba(56,189,248,0.18),   /* blue glow */
+      ellipse at top,
+      rgba(236,72,153,0.18),
+      rgba(56,189,248,0.18),
       #020617 70%
     );
 }
+  
 
 
 .hero h1{
