@@ -9,6 +9,8 @@
 
 
   <style>
+    .slide{display:none;}
+.slide.active{display:block;}
     /* ===== SERVICES (HOME) ===== */
 .services {
   padding: 90px 20px;
@@ -327,6 +329,12 @@
 
 <body>
 
+ 
+  <div class="service-card" onclick="openGoogleAds()">
+  <h3>Google Ads Management</h3>
+  <p>ROI-focused ads that bring real customers</p>
+  </div>
+
 
 <!-- 🔥 IMAGE SLIDER FIRST -->
 <section class="insights">
@@ -438,6 +446,9 @@
 
     </div>
   </div>
+  
+  
+  
 </section>
   <!-- ===== MY SERVICES ===== -->
 <section class="services">
@@ -452,7 +463,46 @@
       <p>High-performance websites that convert visitors into customers</p>
     </a>
   </div>
+  
+
 </section>
+  <section id="googleAdsPage" style="display:none;">
+
+  <section class="webdev-hero">
+    <h1>Google Ads Management</h1>
+    <p>High-converting ads that generate calls & sales</p>
+  </section>
+
+  <!-- SLIDER -->
+  <div class="slider">
+    <div class="slide active">
+      <img src="shivam.png">
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1557838923-2985c318be48">
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+    </div>
+  </div>
+
+  <!-- DETAILS -->
+  <section class="webdev-grid">
+    <div class="webdev-card">Search Ads</div>
+    <div class="webdev-card">Call Ads</div>
+    <div class="webdev-card">Local Business Ads</div>
+    <div class="webdev-card">Conversion Tracking</div>
+    <div class="webdev-card">Daily Optimization</div>
+    <div class="webdev-card">ROI Scaling</div>
+  </section>
+
+  <div class="cta">
+    <a href="https://wa.me/918858166635" class="whatsapp">Start Google Ads</a>
+  </div>
+
+  </section>
+
+
   
 <script>
   const texts = [
@@ -482,6 +532,22 @@
     cards[current].classList.add("active");
   }, 4000);
 </script>
+    <script>
+function openGoogleAds(){
+  document.querySelector(".services").style.display = "none";
+  document.getElementById("googleAdsPage").style.display = "block";
+}
+    </script>
+  <script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3000);
+  </script>
 
 </body>
 </html>
