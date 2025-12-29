@@ -320,6 +320,77 @@
   color: #7dd3fc;
   margin-bottom: 22px;
     }
+    /* ===== SERVICES ===== */
+.services{
+  padding:90px 20px;
+  background:linear-gradient(135deg,#020617,#0b1228,#1e1b4b);
+  text-align:center;
+}
+
+.services h2{
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.services-subtitle{
+  color:#7dd3fc;
+  font-size:18px;
+  margin-bottom:50px;
+}
+
+/* GRID */
+.service-list{
+  max-width:900px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:32px;
+}
+
+/* CARD */
+.service-card{
+  min-height:190px;
+  padding:36px 26px;
+  border-radius:24px;
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  border:1px solid rgba(255,255,255,0.08);
+  color:#fff;
+  text-decoration:none;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  transition:0.35s ease;
+}
+
+/* TEXT */
+.service-card h3{
+  font-size:22px;
+  margin-bottom:12px;
+}
+
+.service-card p{
+  font-size:15px;
+  color:#cbd5f5;
+  line-height:1.6;
+}
+
+/* HOVER */
+.service-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 55px rgba(56,189,248,0.45);
+  background:linear-gradient(
+    145deg,
+    rgba(30,58,138,0.45),
+    rgba(15,23,42,0.95)
+  );
+}
   
 
   </style>
@@ -461,11 +532,28 @@
     </a>
   </div>
   
+<section class="services">
+  <h2>My Services</h2>
+  <p class="services-subtitle">
+    Strategy. Execution. Scalable Business Growth.
+  </p>
 
-  <a href="google-ads.html" class="service-card">
-  <h3>Google Ads Management</h3>
-  <p>ROI-focused ads that bring real customers</p>
-  </a>
+  <div class="service-list">
+
+    <a href="web-development.html" class="service-card">
+      <h3>Website Development</h3>
+      <p>High-performance websites that convert visitors into customers</p>
+    </a>
+
+    <a href="google-ads.html" class="service-card">
+      <h3>Google Ads Management</h3>
+      <p>ROI-focused ads that bring real customers</p>
+    </a>
+
+  </div>
+</section>
+    
+
 
 </section>
   
