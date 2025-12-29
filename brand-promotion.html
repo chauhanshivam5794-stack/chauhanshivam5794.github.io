@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Promotion</title>
+
+<style>
+:root{
+  --bg:#020617;
+  --card:#0f172a;
+  --blue:#38bdf8;
+  --purple:#818cf8;
+  --pink:#ec4899;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:Inter,Arial,sans-serif;
+  background:var(--bg);
+  color:#fff;
+}
+
+/* ===== HERO ===== */
+.hero{
+  padding:110px 20px;
+  text-align:center;
+  background:
+    radial-gradient(circle at top,#1e293b,#020617 70%);
+}
+
+.hero h1{
+  font-size:42px;
+  font-weight:700;
+  background:linear-gradient(90deg,var(--blue),var(--purple));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  margin-top:14px;
+  font-size:18px;
+  color:#94a3b8;
+}
+
+/* ===== CAPABILITIES ===== */
+.capabilities{
+  max-width:1100px;
+  margin:90px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.cap{
+  background:var(--card);
+  padding:34px 26px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,0.05);
+  transition:.35s;
+}
+
+.cap:hover{
+  transform:translateY(-8px);
+  border-color:var(--purple);
+}
+
+.cap h3{
+  margin-bottom:10px;
+  color:var(--blue);
+}
+
+/* ===== AUDIENCE ===== */
+.audience{
+  max-width:1000px;
+  margin:100px auto;
+  padding:60px 20px;
+  border-radius:30px;
+  background:
+    linear-gradient(135deg,#0f172a,#1e1b4b);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  gap:30px;
+}
+
+.stat{
+  text-align:center;
+}
+
+.stat h2{
+  font-size:36px;
+  color:var(--purple);
+}
+
+.stat p{
+  color:#94a3b8;
+}
+
+/* ===== DESIGN SHOWCASE ===== */
+.showcase{
+  max-width:1100px;
+  margin:100px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:32px;
+}
+
+.design-card{
+  background:linear-gradient(
+    145deg,
+    rgba(15,23,42,0.9),
+    rgba(30,41,59,0.9)
+  );
+  padding:34px 24px;
+  border-radius:26px;
+  box-shadow:0 0 0 rgba(0,0,0,0);
+  transition:.4s;
+}
+
+.design-card:hover{
+  box-shadow:0 0 45px rgba(129,140,248,0.35);
+}
+
+.design-card span{
+  color:var(--pink);
+  font-size:13px;
+}
+
+/* ===== CTA ===== */
+.cta{
+  text-align:center;
+  margin:120px 0;
+}
+
+.cta a{
+  padding:16px 40px;
+  border-radius:40px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:600;
+  background:linear-gradient(90deg,var(--blue),var(--purple));
+}
+
+.back{
+  display:block;
+  margin-top:18px;
+  color:#7dd3fc;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Brand & Instagram Promotion</h1>
+  <p>Clean strategy. Real audience. Premium execution.</p>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="capabilities">
+  <div class="cap">
+    <h3>Influencer Promotion</h3>
+    <p>Promotion via high-engagement Instagram audience.</p>
+  </div>
+  <div class="cap">
+    <h3>Product Visibility</h3>
+    <p>Stories + posts designed for conversion.</p>
+  </div>
+  <div class="cap">
+    <h3>Local Brand Boost</h3>
+    <p>Shops, coaching, services & startups.</p>
+  </div>
+  <div class="cap">
+    <h3>Campaign Planning</h3>
+    <p>What to show, when to show, to whom.</p>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="audience">
+  <div class="stat">
+    <h2>170K+</h2>
+    <p>Real Followers</p>
+  </div>
+  <div class="stat">
+    <h2>2L+</h2>
+    <p>Reach Possible</p>
+  </div>
+  <div class="stat">
+    <h2>High</h2>
+    <p>Engagement</p>
+  </div>
+</section>
+
+<!-- DESIGN SHOWCASE -->
+<section class="showcase">
+  <div class="design-card">
+    <span>Design Style 01</span>
+    <h3>Minimal Promotion Layout</h3>
+    <p>Clean, ACIM-style professional look.</p>
+  </div>
+  <div class="design-card">
+    <span>Design Style 02</span>
+    <h3>Bold Brand Awareness</h3>
+    <p>High-impact visuals with clarity.</p>
+  </div>
+  <div class="design-card">
+    <span>Design Style 03</span>
+    <h3>Trust-Focused Campaign</h3>
+    <p>Audience + proof based design.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <a href="https://wa.me/918858166635">Discuss Promotion</a>
+  <a href="index.html" class="back">← Back to Home</a>
+</div>
+
+</body>
+</html>
