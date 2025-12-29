@@ -19,54 +19,57 @@ body{
   overflow-x:hidden;
 }
 
-/* ===== HERO ===== */
+/* ===== HERO (FIXED HEIGHT) ===== */
 .hero{
-  min-height:100vh;
-  padding:120px 20px 80px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  padding:70px 20px 50px;
   text-align:center;
-
   background:
     radial-gradient(ellipse at top,
-      rgba(236,72,153,0.25),
+      rgba(236,72,153,0.22),
       rgba(168,85,247,0.18),
-      rgba(59,130,246,0.15),
+      rgba(59,130,246,0.14),
       #020617 70%
     );
 }
 
 .hero h1{
-  font-size:38px;
-  margin-bottom:14px;
+  font-size:34px;
+  margin-bottom:10px;
   background:linear-gradient(90deg,#60a5fa,#f472b6);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
 .hero p{
-  font-size:17px;
+  font-size:16px;
   color:#cbd5f5;
-  max-width:520px;
-  margin:0 auto;
 }
 
-/* ===== GLOW DIVIDER ===== */
-.glow-divider{
-  height:120px;
-  background:
-    radial-gradient(circle at bottom,
-      rgba(236,72,153,0.25),
-      rgba(168,85,247,0.15),
-      transparent 70%
-    );
+/* ===== IMAGE SLIDER ===== */
+.slider{
+  max-width:900px;
+  margin:50px auto;
+  position:relative;
+}
+
+.slide{
+  display:none;
+}
+
+.slide.active{
+  display:block;
+}
+
+.slide img{
+  width:100%;
+  border-radius:24px;
+  box-shadow:0 0 60px rgba(236,72,153,0.45);
 }
 
 /* ===== STATS ===== */
 .stats{
   max-width:900px;
-  margin:-70px auto 80px;
+  margin:60px auto 80px;
   padding:30px;
   border-radius:26px;
   display:grid;
@@ -87,7 +90,7 @@ body{
 }
 
 .stat h2{
-  font-size:32px;
+  font-size:30px;
   color:#f472b6;
 }
 
@@ -99,7 +102,7 @@ body{
 /* ===== SERVICES ===== */
 .services{
   max-width:1100px;
-  margin:80px auto;
+  margin:70px auto;
   padding:0 20px;
 
   display:grid;
@@ -108,7 +111,7 @@ body{
 }
 
 .service-card{
-  padding:36px 26px;
+  padding:34px 26px;
   border-radius:22px;
   background:
     linear-gradient(
@@ -123,7 +126,7 @@ body{
 }
 
 .service-card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-8px);
   box-shadow:0 0 70px rgba(236,72,153,0.45);
 }
 
@@ -140,12 +143,12 @@ body{
 /* ===== CTA ===== */
 .cta{
   text-align:center;
-  margin:100px 0 60px;
+  margin:90px 0 60px;
 }
 
 .cta a{
   display:inline-block;
-  padding:16px 38px;
+  padding:15px 36px;
   border-radius:40px;
   text-decoration:none;
   color:#fff;
@@ -157,7 +160,7 @@ body{
 
 .back{
   display:block;
-  margin-top:28px;
+  margin-top:26px;
   color:#93c5fd;
   text-decoration:none;
 }
@@ -168,13 +171,24 @@ body{
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <div>
-    <h1>Brand & Instagram Promotion</h1>
-    <p>Clean strategy. Real audience. Premium execution.</p>
-  </div>
+  <h1>Brand & Instagram Promotion</h1>
+  <p>Clean strategy. Real audience. Premium execution.</p>
 </section>
 
-<div class="glow-divider"></div>
+<!-- ===== IMAGE SLIDER ===== -->
+<div class="slider">
+  <div class="slide active">
+    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113">
+  </div>
+
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1616469829479-1c7b3b8a53c4">
+  </div>
+
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1629904853716-f0bc54eea481">
+  </div>
+</div>
 
 <!-- ===== STATS ===== -->
 <section class="stats">
@@ -188,7 +202,7 @@ body{
   </div>
   <div class="stat">
     <h2>High</h2>
-    <p>Engagement Rate</p>
+    <p>Engagement</p>
   </div>
 </section>
 
@@ -201,17 +215,17 @@ body{
 
   <div class="service-card">
     <h3>Product Visibility</h3>
-    <p>Stories & posts designed for real conversions.</p>
+    <p>Stories & posts designed for conversion.</p>
   </div>
 
   <div class="service-card">
     <h3>Local Brand Boost</h3>
-    <p>Shops, coaching, services & startups growth.</p>
+    <p>Shops, coaching, services & startups.</p>
   </div>
 
   <div class="service-card">
     <h3>Campaign Planning</h3>
-    <p>Strategic planning for scalable brand awareness.</p>
+    <p>Strategic content & promotion planning.</p>
   </div>
 </section>
 
@@ -220,6 +234,17 @@ body{
   <a href="https://wa.me/918858166635">Start Brand Promotion</a>
   <a href="index.html" class="back">← Back to Home</a>
 </div>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let i = 0;
+
+setInterval(()=>{
+  slides[i].classList.remove("active");
+  i = (i + 1) % slides.length;
+  slides[i].classList.add("active");
+},3500);
+</script>
 
 </body>
 </html>
