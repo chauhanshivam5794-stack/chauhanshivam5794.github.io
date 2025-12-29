@@ -9,6 +9,51 @@
 
 
   <style>
+    /* ===== SERVICES (HOME) ===== */
+.services {
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #020617, #0b1228, #1e1b4b);
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.services-subtitle {
+  font-size: 18px;
+  color: #7dd3fc;
+  margin-bottom: 50px;
+  animation: fadeUp 1.2s ease;
+}
+
+.service-list {
+  max-width: 420px;
+  margin: auto;
+}
+
+.service-card {
+  display: block;
+  padding: 35px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(168,85,247,0.4);
+  background: linear-gradient(135deg, #1e1b4b, #312e81);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
     /* ===== MY APPROACH (PROFESSIONAL) ===== */
 .approach {
   padding: 90px 20px;
@@ -392,6 +437,20 @@
       </div>
 
     </div>
+  </div>
+</section>
+  <!-- ===== MY SERVICES ===== -->
+<section class="services">
+  <h2>My Services</h2>
+  <p class="services-subtitle">
+    Strategy. Execution. Scalable Business Growth.
+  </p>
+
+  <div class="service-list">
+    <a href="web-development.html" class="service-card">
+      <h3>Website Development</h3>
+      <p>High-performance websites that convert visitors into customers</p>
+    </a>
   </div>
 </section>
   
