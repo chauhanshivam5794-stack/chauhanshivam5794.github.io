@@ -9,6 +9,49 @@
 
 
   <style>
+
+    .services-bg {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #0b1020, #05060d 70%);
+}
+
+/* PURPLE NEBULA */
+.services-bg::before {
+  content: '';
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(127,92,255,0.45), transparent 70%);
+  filter: blur(120px);
+  top: -120px;
+  left: -120px;
+  animation: galaxyFloat1 18s ease-in-out infinite alternate;
+}
+
+/* PINK NEBULA */
+.services-bg::after {
+  content: '';
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(255,78,205,0.35), transparent 70%);
+  filter: blur(130px);
+  bottom: -150px;
+  right: -150px;
+  animation: galaxyFloat2 26s ease-in-out infinite alternate;
+}
+
+/* MOVEMENT */
+@keyframes galaxyFloat1 {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-90px); }
+}
+
+@keyframes galaxyFloat2 {
+  from { transform: translateY(0); }
+  to   { transform: translateY(110px); }
+}
     /* ===== MY SERVICES BACKGROUND GLOW ===== */
 .services-bg{
   position: relative;
