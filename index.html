@@ -9,6 +9,82 @@
 
 
   <style>
+    .service-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px;
+}
+
+/* ===== PREMIUM SERVICE CARD ===== */
+.promo-card{
+  background:linear-gradient(
+    135deg,
+    rgba(30,41,59,0.95),
+    rgba(15,23,42,0.95)
+  );
+  border-radius:22px;
+  padding:36px 22px;
+  text-align:center;
+  color:#fff;
+  box-shadow:
+    0 0 25px rgba(59,130,246,0.25),
+    0 0 45px rgba(236,72,153,0.25);
+  transition:all 0.45s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Glow border animation */
+.promo-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:22px;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(236,72,153,0.35),
+    rgba(59,130,246,0.35),
+    transparent
+  );
+  opacity:0;
+  transition:0.45s;
+}
+
+.promo-card:hover::before{
+  opacity:1;
+}
+
+.promo-card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:
+    0 0 45px rgba(236,72,153,0.45),
+    0 0 70px rgba(59,130,246,0.45);
+}
+
+/* Title */
+.promo-card h3{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+/* Description */
+.promo-card p{
+  font-size:14px;
+  color:#cbd5f5;
+}
+
+/* Tag button */
+.tag{
+  display:inline-block;
+  margin-top:16px;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600;
+  background:linear-gradient(90deg,#ec4899,#8b5cf6);
+  box-shadow:0 0 20px rgba(236,72,153,0.45);
+}
     .slide{display:none;}
 .slide.active{display:block;}
     /* ===== SERVICES (HOME) ===== */
@@ -533,30 +609,28 @@
   
 </section>
   <!-- ===== MY SERVICES ===== -->
-
-<section class="services">
-  <h2>My Services</h2>
-  <p class="services-subtitle">
-    Strategy. Execution. Scalable Business Growth.
-  </p>
-
   <div class="service-list">
 
-    <a href="web-development.html" class="service-card">
-      <h3>Website Development</h3>
-      <p>High-performance websites that convert visitors into customers</p>
-    </a>
+  <a href="web-development.html" class="service-card promo-card">
+    <h3>Website Development</h3>
+    <p>High-performance websites that convert visitors into customers</p>
+    <span class="tag">Premium Build</span>
+  </a>
 
-    <a href="google-ads.html" class="service-card">
-      <h3>Google Ads Management</h3>
-      <p>ROI-focused ads that bring real customers</p>
-    </a>
+  <a href="google-ads.html" class="service-card promo-card">
+    <h3>Google Ads Management</h3>
+    <p>ROI-focused ads that bring real customers</p>
+    <span class="tag">High ROI</span>
+  </a>
 
-    <a href="brand-promotion.html" class="service-card promo-card">
-  <h3>Brand Promotion (Instagram)</h3>
-  <p>Promote your brand to 170K+ real Instagram audience</p>
-  <span class="tag">170K+ Followers</span>
-    </a>
+  <a href="brand-promotion.html" class="service-card promo-card">
+    <h3>Brand Promotion (Instagram)</h3>
+    <p>Promote your brand to 170K+ real Instagram audience</p>
+    <span class="tag">170K+ Followers</span>
+  </a>
+
+  </div>
+  
 
   </div>
 </section>
