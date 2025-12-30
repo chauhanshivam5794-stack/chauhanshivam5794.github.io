@@ -10,6 +10,62 @@
 
   <style>
 
+    .service-list {
+  position: relative;
+  z-index: 2;
+    }
+
+    @keyframes floatUp {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-220px); }
+}
+
+@keyframes floatDown {
+  from { transform: translateY(0); }
+  to   { transform: translateY(240px); }
+}
+    .orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.8;
+}
+
+/* Purple galaxy */
+.orb.purple {
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(127,92,255,0.45), transparent 70%);
+  left: -200px;
+  top: 60%;
+  animation: floatUp 14s ease-in-out infinite alternate;
+}
+
+/* Pink galaxy */
+.orb.pink {
+  width: 460px;
+  height: 460px;
+  background: radial-gradient(circle, rgba(255,78,205,0.4), transparent 70%);
+  right: -220px;
+  bottom: 10%;
+  animation: floatDown 20s ease-in-out infinite alternate;
+}
+    .galaxy-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+    }
+    
+    .services-bg {
+  position: relative;
+  min-height: 100vh;
+  background: #05060d;
+  overflow: hidden;
+    }
+
+    
+
    .services-bg > * {
   position: relative;
   z-index: 2;
@@ -835,6 +891,20 @@
   
 </section>
   <!-- ===== MY SERVICES ===== -->
+  <section class="services-bg">
+
+  <!-- GALAXY ANIMATION LAYER -->
+  <div class="galaxy-bg">
+    <span class="orb purple"></span>
+    <span class="orb pink"></span>
+  </div>
+
+  <div class="service-list">
+    <!-- tumhara My Services + cards yahin rahenge -->
+  </div>
+
+  </section>
+  
   <section class="services-bg">
   <div class="service-list">
     <div class="services-heading">
