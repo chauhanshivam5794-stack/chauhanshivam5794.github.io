@@ -9,6 +9,65 @@
 
 
   <style>
+    .services-bg > * {
+  position: relative;
+  z-index: 2;
+    }
+    @keyframes galaxyMove1 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-120px);
+  }
+}
+
+@keyframes galaxyMove2 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(140px);
+  }
+}
+
+    .services-bg::before,
+.services-bg::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Purple galaxy light */
+.services-bg::before {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(127,92,255,0.45), transparent 70%);
+  filter: blur(120px);
+  top: 40%;
+  left: -150px;
+  animation: galaxyMove1 18s linear infinite alternate;
+}
+
+/* Pink galaxy light */
+.services-bg::after {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(255,78,205,0.35), transparent 70%);
+  filter: blur(130px);
+  bottom: 20%;
+  right: -160px;
+  animation: galaxyMove2 26s linear infinite alternate;
+}
+    
+    .services-bg {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #0b1020, #05060d 75%);
+  z-index: 1;
+    }
 
     .services-bg {
   position: relative;
