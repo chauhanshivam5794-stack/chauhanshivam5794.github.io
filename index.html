@@ -9,6 +9,47 @@
 
 
   <style>
+    /* ===== MY SERVICES BACKGROUND GLOW ===== */
+.services-bg{
+  position: relative;
+  overflow: hidden;
+  padding: 90px 20px;
+}
+
+.services-bg::before,
+.services-bg::after{
+  content:'';
+  position:absolute;
+  width:320px;
+  height:320px;
+  background: radial-gradient(circle, rgba(127,92,255,0.6), transparent 70%);
+  filter: blur(90px);
+  animation: float 10s infinite alternate ease-in-out;
+  z-index:0;
+}
+
+.services-bg::before{
+  top:-120px;
+  left:-120px;
+}
+
+.services-bg::after{
+  background: radial-gradient(circle, rgba(255,78,205,0.55), transparent 70%);
+  bottom:-140px;
+  right:-140px;
+  animation-duration:14s;
+}
+
+/* text upar rahe */
+.services-bg *{
+  position:relative;
+  z-index:1;
+}
+
+@keyframes float{
+  from{ transform:translateY(0); }
+  to{ transform:translateY(-80px); }
+}
     /* ===== MY SERVICES HEADING ===== */
 .services-heading{
   text-align:center;
@@ -632,6 +673,7 @@
   
 </section>
   <!-- ===== MY SERVICES ===== -->
+  <section class="services-bg">
   <div class="service-list">
     <div class="services-heading">
   <h2>My Services</h2>
