@@ -9,6 +9,66 @@
 
 
   <style>
+
+   .services-bg > * {
+  position: relative;
+  z-index: 2;
+   } 
+
+    @keyframes galaxyFloat1 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-180px);
+  }
+}
+
+@keyframes galaxyFloat2 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(200px);
+  }
+}
+    .services-bg::before,
+.services-bg::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Purple nebula */
+.services-bg::before {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(127,92,255,0.35), transparent 70%);
+  filter: blur(140px);
+  top: 60%;
+  left: -200px;
+  animation: galaxyFloat1 16s ease-in-out infinite alternate;
+}
+
+/* Pink nebula */
+.services-bg::after {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(255,78,205,0.3), transparent 70%);
+  filter: blur(150px);
+  bottom: 10%;
+  right: -220px;
+  animation: galaxyFloat2 22s ease-in-out infinite alternate;
+}
+    
+    .services-bg {
+  position: relative;
+  min-height: 100vh;        /* 🔥 THIS IS THE KEY */
+  overflow: hidden;
+  background: #05060d;
+    }
     .services-bg > * {
   position: relative;
   z-index: 2;
@@ -800,7 +860,7 @@
     <span class="tag">170K+ Followers</span>
   </a>
 
-  </div>
+
   
 
   </div>
